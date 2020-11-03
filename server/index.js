@@ -23,7 +23,7 @@ app.get('/api/products', (req, res, next) => {
   const text = 'SELECT "image", "name", "price", "productId", "shortDescription" FROM "products"';
   db.query(text)
     .then(result => {
-      res.status(200).send(result);
+      res.status(200).send(result.rows);
     })
     .catch(err => next(err));
 });
