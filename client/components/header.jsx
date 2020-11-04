@@ -6,10 +6,6 @@ export default class Header extends React.Component {
     this.state = {};
   }
 
-  componentDidMount() {
-
-  }
-
   render() {
     return (
       <header className="header white"><i className="fas fa-dollar-sign"></i> Wicked Sales</header>
