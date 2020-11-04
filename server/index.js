@@ -28,6 +28,20 @@ app.get('/api/products', (req, res, next) => {
     .catch(err => next(err));
 });
 
+app.get('/api/products/:productId', (req, res, next) => {
+  const text = 'SELECT * FROM "products" WHERE "productId" = $1';
+  const values = [req.params.productId];
+  db.query(text, values)
+    .then(result => {
+      if (result.rows[0] === undefined) {
+        next(new ClientError(`cannot ${req.method} ${req.originalUrl}`, 404));
+      } else {
+        return res.status(200).send(result.rows[0]);
+      }
+    })
+    .catch(err => next(err));
+});
+
 app.use('/api', (req, res, next) => {
   next(new ClientError(`cannot ${req.method} ${req.originalUrl}`, 404));
 });
