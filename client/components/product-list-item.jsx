@@ -21,7 +21,9 @@ export default class ProductListItem extends React.Component {
     const fixed = this.fixPrice(this.props.value.price);
     return (
       <div className="col-md-4">
-        <div className="product-card">
+        <div className="product-card hover" onClick={() => {
+          this.props.setView('details', this.props.value.productId);
+        }}>
           <div className="image-div">
             <img className="image" src={this.props.value.image} alt={this.props.value.name}></img>
           </div>
