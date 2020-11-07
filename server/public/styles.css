@@ -46,6 +46,13 @@ p {
   width: auto;
   height: 200px;
 }
+.button {
+  color: white;
+  font-size: 12px;
+  background-color: rgb(84, 142, 209);
+  border: none;
+  border-radius: 5px;
+}
 .smaller-text {
   font-size: 10px;
 }
@@ -61,10 +68,23 @@ p {
 .padding-left-5 {
   padding-left: 5px;
 }
+.padding-right-5 {
+  padding-right: 5px;
+}
+.margin-left-5 {
+  margin-left: 5px;
+}
 .hover:hover {
   cursor: pointer;
 }
 .hover-details:hover {
   cursor: pointer;
   width: 90px;
+}
+.button:hover {
+  cursor: pointer;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
 }

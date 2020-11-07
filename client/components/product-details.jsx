@@ -45,6 +45,9 @@ export default class ProductDetails extends React.Component {
                 <p className="padding-top-5"><b>{this.state.product.name}</b></p>
                 <p className="gray">{fixed}</p>
                 <p className="smaller-text padding-top-5"><b>{this.state.product.shortDescription}</b></p>
+                <button className="button margin-left-5" onClick={() => {
+                  this.props.addToCart(this.state.product);
+                }}>Add to cart</button>
               </div>
             </div>
             <p className="smaller-text padding-top-5"><b>{this.state.product.longDescription}</b></p>
