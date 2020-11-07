@@ -58,7 +58,7 @@ app.get('/api/cart', (req, res, next) => {
     const value = [req.session.cartId];
     db.query(text, value)
       .then(cart => {
-        res.status(200).send(cart.rows[0]);
+        res.status(200).send(cart.rows);
       })
       .catch(err => next(err));
   }
