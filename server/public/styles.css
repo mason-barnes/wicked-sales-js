@@ -33,6 +33,10 @@ p {
   margin-top: 10px;
   background-color: white;
 }
+.product-info {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
 .image-div {
   padding: 5px;
   display: flex;
@@ -46,12 +50,31 @@ p {
   width: auto;
   height: 200px;
 }
+.cart-image-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+}
+.cart-image {
+  height: 150px;
+}
 .button {
   color: white;
   font-size: 12px;
   background-color: rgb(84, 142, 209);
   border: none;
   border-radius: 5px;
+}
+.cart-product {
+  margin: 0 auto;
+  height: 200px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
 }
 .smaller-text {
   font-size: 10px;

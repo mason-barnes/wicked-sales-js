@@ -9,11 +9,9 @@ export default class ProductListItem extends React.Component {
   fixPrice(price) {
     const fixedPrice = this.props.value.price.toFixed();
     if (fixedPrice.length === 3) {
-      price = '$' + fixedPrice[0] + '.' + fixedPrice[1] + fixedPrice[2];
-      return price;
+      return '$' + fixedPrice[0] + '.' + fixedPrice[1] + fixedPrice[2];
     } else if (fixedPrice.length === 4) {
-      price = '$' + fixedPrice[0] + fixedPrice[1] + '.' + fixedPrice[2] + fixedPrice[3];
-      return price;
+      return '$' + fixedPrice[0] + fixedPrice[1] + '.' + fixedPrice[2] + fixedPrice[3];
     }
   }
 

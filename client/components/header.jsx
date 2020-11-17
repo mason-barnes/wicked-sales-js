@@ -4,6 +4,11 @@ export default class Header extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
+    this.cartView = this.cartView.bind(this);
+  }
+
+  cartView() {
+    this.props.setView('cart', {});
   }
 
   render() {
@@ -14,7 +19,7 @@ export default class Header extends React.Component {
             <i className="fas fa-dollar-sign padding-right-5"></i>
           Wicked Sales
           </div>
-          <div className="padding-right-5 hover">
+          <div className="padding-right-5 hover" onClick={this.cartView}>
             {this.props.cartItemCount} Items
             <i className="fas fa-shopping-cart padding-right-5 padding-left-5"></i>
           </div>
@@ -27,7 +32,7 @@ export default class Header extends React.Component {
             <i className="fas fa-dollar-sign padding-right-5"></i>
           Wicked Sales
           </div>
-          <div className="padding-right-5 hover">
+          <div className="padding-right-5 hover" onClick={this.cartView}>
             {this.props.cartItemCount} Item
             <i className="fas fa-shopping-cart padding-right-5 padding-left-5"></i>
           </div>
