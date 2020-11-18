@@ -130,6 +130,29 @@ app.post('/api/cart', (req, res, next) => {
     .catch(err => next(err));
 });
 
+app.post('/api/orders', (req, res, next) => {
+  if (!req.session.cartId) {
+    res.status(400).send({ error: 'cannot find cartId' });
+  } else if (!req.body.name || !req.body.creditCard || !req.body.shippingAddress) {
+    res.status(404).send({ error: 'name, credit card, and shipping address are required' });
+  } else {
+    const insert = `
+      insert into "orders" ("cartId", "name", "creditCard", "shippingAddress")
+        values ($1, $2, $3, $4)
+        returning *
+    `;
+    const values = [req.session.cartId, req.body.name, req.body.creditCard, req.body.shippingAddress];
+    db.query(insert, values)
+      .then(result => {
+        res.status(201).send(result.rows[0]);
+      })
+      .then(() => {
+        req.session = null;
+      })
+      .catch(err => next(err));
+  }
+});
+
 app.use('/api', (req, res, next) => {
   next(new ClientError(`cannot ${req.method} ${req.originalUrl}`, 404));
 });

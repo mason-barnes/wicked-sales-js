@@ -25,7 +25,7 @@ export default class ProductDetails extends React.Component {
       return (
         <div className="container">
           <div className="product-card-details">
-            <p className="smaller-text padding-top-5 hover-details" onClick={() => {
+            <p className="smaller-text padding-top-5 catalog-button" onClick={() => {
               this.props.setView('catalog', {});
             }}><i className="fas fa-angle-left"></i> Back to Catalog</p>
             <div className="image-div">
