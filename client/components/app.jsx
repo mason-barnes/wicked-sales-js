@@ -54,11 +54,6 @@ export default class App extends React.Component {
           cart: products
         });
       });
-    // .then(data => {
-    //   this.setState({
-    //     cart: data
-    //   });
-    // });
   }
 
   componentDidMount() {

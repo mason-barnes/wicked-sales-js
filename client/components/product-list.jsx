@@ -34,7 +34,7 @@ export default class ProductList extends React.Component {
         <div className="row">
           {
             array.map(item => {
-              return <ProductListItem fixPrice={this.props.fixPrice} setView={this.props.setView} key={item.productId} value={item}/>;
+              return <ProductListItem setView={this.props.setView} key={item.productId} value={item}/>;
             })
           }
         </div>

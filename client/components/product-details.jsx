@@ -1,4 +1,5 @@
 import React from 'react';
+import fixPrice from '../lib/fixprice';
 
 export default class ProductDetails extends React.Component {
   constructor(props) {
@@ -6,16 +7,6 @@ export default class ProductDetails extends React.Component {
     this.state = {
       product: null
     };
-    this.fixPrice = this.fixPrice.bind(this);
-  }
-
-  fixPrice(price) {
-    const fixedPrice = this.state.product.price.toFixed();
-    if (fixedPrice.length === 3) {
-      return '$' + fixedPrice[0] + '.' + fixedPrice[1] + fixedPrice[2];
-    } else if (fixedPrice.length === 4) {
-      return '$' + fixedPrice[0] + fixedPrice[1] + '.' + fixedPrice[2] + fixedPrice[3];
-    }
   }
 
   componentDidMount() {
@@ -30,7 +21,7 @@ export default class ProductDetails extends React.Component {
 
   render() {
     if (this.state.product) {
-      const fixed = this.fixPrice(this.state.product.price);
+      const fixed = fixPrice(this.state.product.price);
       return (
         <div className="container">
           <div className="product-card-details">
