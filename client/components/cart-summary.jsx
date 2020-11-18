@@ -6,20 +6,11 @@ export default class CartSummary extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
-    this.getTotal = this.getTotal.bind(this);
+    this.checkoutView = this.checkoutView.bind(this);
   }
 
-  getTotal() {
-    let totalAmount = 0;
-    for (let i = 0; i < this.props.cartArray.length; i++) {
-      totalAmount += this.props.cartArray[i].price;
-    }
-    if (totalAmount === 0) {
-      return '$0';
-    } else {
-      const fixedTotal = fixPrice(totalAmount);
-      return fixedTotal;
-    }
+  checkoutView() {
+    this.props.setView('checkout', {});
   }
 
   render() {
@@ -49,7 +40,10 @@ export default class CartSummary extends React.Component {
               );
             })
           }
-          <p>Total amount: {this.getTotal()}</p>
+          <div className="space-between">
+            <p>Total amount: {this.props.getTotal()}</p>
+            <button className="checkout-button" onClick={this.checkoutView}>Checkout</button>
+          </div>
         </div>
       );
     }
