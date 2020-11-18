@@ -75,7 +75,10 @@ p {
   display: flex;
   margin-top: 20px;
   margin-bottom: 20px;
-
+}
+.my-cart-title, .empty-cart {
+  margin-top: 20px;
+  margin-left: 20px;
 }
 .smaller-text {
   font-size: 10px;
@@ -101,11 +104,12 @@ p {
 .hover:hover {
   cursor: pointer;
 }
-.hover-details:hover {
-  cursor: pointer;
+.catalog-button {
   width: 90px;
+  margin-left: 10px;
+  margin-top: 10px;
 }
-.button:hover {
+.button:hover, .catalog-button:hover {
   cursor: pointer;
 }
 .flex {
