@@ -36,7 +36,7 @@ export default class CartSummary extends React.Component {
             array.map(item => {
               const fixed = fixPrice(item.price);
               return (
-                <CartSummaryItem cartArray={this.props.cartArray} key={item.cartItemId} fixed={fixed} item={item} />
+                <CartSummaryItem getCartItems={this.props.getCartItems} cartArray={this.props.cartArray} key={item.cartItemId} fixed={fixed} item={item} />
               );
             })
           }
