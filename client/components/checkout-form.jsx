@@ -20,7 +20,7 @@ export default class CheckoutForm extends React.Component {
     return (
       <div className="checkout">
         <h1>My Cart</h1>
-        <p className="gray">Order Total: {this.props.getTotal()}</p>
+        <p>Order Total: {this.props.getTotal()}</p>
         <form className="form" onSubmit={this.finalize}>
           <p className="name-heading">Name</p>
           <input className="input" type="text" name="user-name" onChange={event => {
@@ -41,9 +41,9 @@ export default class CheckoutForm extends React.Component {
             });
           }}></input>
           <div className="space margin-top-10">
-            <p className="smaller-text padding-top-5 catalog-button" onClick={() => {
+            <p className="font-size-10 padding-top-5 catalog-button" onClick={() => {
               this.props.setView('catalog', {});
-            }}><i className="fas fa-angle-left"></i> Back to Catalog</p>
+            }}><b><i className="fas fa-angle-left"></i> Back to Catalog</b></p>
             <button name="place-order-button" className="order-button">Place Order</button>
           </div>
         </form>
