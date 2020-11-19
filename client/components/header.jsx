@@ -17,7 +17,7 @@ export default class Header extends React.Component {
         <header className="header white flex">
           <div>
             <i className="fas fa-dollar-sign padding-right-5"></i>
-          Wicked Sales
+          All Guitars, No Sitars
           </div>
           <div className="padding-right-5 hover" onClick={this.cartView}>
             {this.props.cartItemCount} Items
@@ -30,7 +30,7 @@ export default class Header extends React.Component {
         <header className="header white flex">
           <div>
             <i className="fas fa-dollar-sign padding-right-5"></i>
-          Wicked Sales
+          All Guitars, No Sitars
           </div>
           <div className="padding-right-5 hover" onClick={this.cartView}>
             {this.props.cartItemCount} Item

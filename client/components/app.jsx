@@ -100,28 +100,28 @@ export default class App extends React.Component {
   render() {
     if (this.state.view.name === 'catalog') {
       return (
-        <div>
+        <div className="margin-bottom-20">
           <Header setView={this.setView} cartItemCount={this.state.cart.length} />
           <ProductList setView={this.setView} />
         </div>
       );
     } else if (this.state.view.name === 'details') {
       return (
-        <div>
+        <div className="margin-bottom-20">
           <Header setView={this.setView} cartItemCount={this.state.cart.length} />
           <ProductDetails addToCart={this.addToCart} setView={this.setView} productId={this.state.view.params} />
         </div>
       );
     } else if (this.state.view.name === 'cart') {
       return (
-        <div>
+        <div className="margin-bottom-20">
           <Header setView={this.setView} cartItemCount={this.state.cart.length} />
-          <CartSummary getTotal={this.getTotal} setView={this.setView} cartArray={this.state.cart} />
+          <CartSummary getCartItems={this.getCartItems} getTotal={this.getTotal} setView={this.setView} cartArray={this.state.cart} />
         </div>
       );
     } else if (this.state.view.name === 'checkout') {
       return (
-        <div>
+        <div className="margin-bottom-20">
           <Header setView={this.setView} cartItemCount={this.state.cart.length} />
           <CheckoutForm getTotal={this.getTotal} setView={this.setView} placeOrder={this.placeOrder}/>
         </div>
