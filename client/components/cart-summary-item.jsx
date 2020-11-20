@@ -38,7 +38,7 @@ export default class CartSummaryItem extends React.Component {
             <div className="product-info margin-left-5">
               <p><b>{item.name}</b></p>
               <p className="gray">{fixPrice(item.price)}</p>
-              <p className="smaller-text">{item.shortDescription}</p>
+              <p className="font-size-10"><b>{item.shortDescription}</b></p>
             </div>
             <div>
               <button name="delete" className="delete-button" onClick={this.deleteItem}>Delete</button>

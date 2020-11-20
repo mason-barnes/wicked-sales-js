@@ -19,7 +19,7 @@ export default class ProductListItem extends React.Component {
           </div>
           <p className="padding-top-5"><b>{this.props.value.name}</b></p>
           <p className="gray">{fixed}</p>
-          <p className="smaller-text padding-top-5"><b>{this.props.value.shortDescription}</b></p>
+          <p className="font-size-10"><b>{this.props.value.shortDescription}</b></p>
         </div>
       </div>
     );

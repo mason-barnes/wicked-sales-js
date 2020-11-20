@@ -19,6 +19,7 @@ export default class Header extends React.Component {
             <i className="fas fa-dollar-sign padding-right-5"></i>
           All Guitars, No Sitars
           </div>
+          <p className="font-size-12">This site is a demo only! Do not enter personal info!</p>
           <div className="padding-right-5 hover" onClick={this.cartView}>
             {this.props.cartItemCount} Items
             <i className="fas fa-shopping-cart padding-right-5 padding-left-5"></i>
@@ -32,6 +33,7 @@ export default class Header extends React.Component {
             <i className="fas fa-dollar-sign padding-right-5"></i>
           All Guitars, No Sitars
           </div>
+          <p className="font-size-12">This site is a demo only! Do not enter personal info!</p>
           <div className="padding-right-5 hover" onClick={this.cartView}>
             {this.props.cartItemCount} Item
             <i className="fas fa-shopping-cart padding-right-5 padding-left-5"></i>

@@ -18,7 +18,7 @@ export default class CartSummary extends React.Component {
     if (array.length === 0) {
       return (
         <div>
-          <p className="smaller-text padding-top-5 catalog-button" onClick={() => {
+          <p className="font-size-10 padding-top-5 catalog-button" onClick={() => {
             this.props.setView('catalog', {});
           }}><i className="fas fa-angle-left"></i> Back to Catalog</p>
           <h1 className="my-cart-title">My cart</h1>
@@ -28,9 +28,9 @@ export default class CartSummary extends React.Component {
     } else {
       return (
         <div>
-          <p className="smaller-text padding-top-5 catalog-button" onClick={() => {
+          <p className="font-size-10 padding-top-5 catalog-button" onClick={() => {
             this.props.setView('catalog', {});
-          }}><i className="fas fa-angle-left"></i> Back to Catalog</p>
+          }}><b><i className="fas fa-angle-left"></i> Back to Catalog</b></p>
           <h1 className="my-cart-title">My Cart</h1>
           {
             array.map(item => {
@@ -41,7 +41,7 @@ export default class CartSummary extends React.Component {
             })
           }
           <div className="space-between">
-            <p>Total amount: {this.props.getTotal()}</p>
+            <p><b>Total amount: {this.props.getTotal()}</b></p>
             <button className="checkout-button" onClick={this.checkoutView}>Checkout</button>
           </div>
         </div>
