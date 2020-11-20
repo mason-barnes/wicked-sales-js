@@ -95,7 +95,6 @@ export default class App extends React.Component {
 
   componentDidMount() {
     this.getCartItems();
-    alert('This website is a demo and no real purchases will be made!');
   }
 
   render() {
@@ -121,7 +120,6 @@ export default class App extends React.Component {
         </div>
       );
     } else if (this.state.view.name === 'checkout') {
-      alert('Please do not use your personal information at checkout!');
       return (
         <div className="margin-bottom-20">
           <Header setView={this.setView} cartItemCount={this.state.cart.length} />
